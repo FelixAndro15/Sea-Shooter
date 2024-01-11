@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://bowiomsj157g0"]
+
+[ext_resource type="Script" path="res://enemies/enemy_spawner/enemy_spawner.gd" id="1_ev1pt"]
+
+[node name="EnemySpawner" type="Node2D"]
+script = ExtResource("1_ev1pt")
+
+[node name="Left" type="Node2D" parent="."]
+
+[node name="1" type="Marker2D" parent="Left"]
+position = Vector2(-32, 77)
+
+[node name="2" type="Marker2D" parent="Left"]
+position = Vector2(-32, 107)
+
+[node name="3" type="Marker2D" parent="Left"]
+position = Vector2(-32, 141)
+
+[node name="4" type="Marker2D" parent="Left"]
+position = Vector2(-32, 169)
+
+[node name="Right" type="Node2D" parent="."]
+
+[node name="1" type="Marker2D" parent="Right"]
+position = Vector2(290, 80)
+
+[node name="2" type="Marker2D" parent="Right"]
+position = Vector2(290, 110)
+
+[node name="3" type="Marker2D" parent="Right"]
+position = Vector2(290, 142)
+
+[node name="4" type="Marker2D" parent="Right"]
+position = Vector2(290, 172)
+
+[node name="SpawnEnemyTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="SpawnPersonTimer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="SpawnEnemyTimer" to="." method="_on_spawn_enemy_timer_timeout"]
+[connection signal="timeout" from="SpawnPersonTimer" to="." method="_on_spawn_person_timer_timeout"]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8j7y2hi07enc"]
+
+[ext_resource type="Texture2D" uid="uid://dry5nf6xmlbju" path="res://user_interface/people-count/person_empty_ui.png" id="1_6lhql"]
+[ext_resource type="Script" path="res://user_interface/people-count/person_ui.gd" id="2_m2yqr"]
+
+[node name="PersonUI" type="Sprite2D"]
+texture = ExtResource("1_6lhql")
+hframes = 2
+script = ExtResource("2_m2yqr")
